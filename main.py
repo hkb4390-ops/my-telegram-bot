@@ -1,3 +1,15 @@
+import sys
+import types
+
+# =========================================================
+# CRITICAL FIX FOR PYTHON 3.14 COMPATIBILITY WITH TELEGRAM
+# =========================================================
+from telegram.ext import Updater
+if not hasattr(Updater, '_Updater__polling_cleanup_cb'):
+    # Inject the missing internal attribute to bypass Python 3.14 type slot restriction
+    setattr(Updater, '_Updater__polling_cleanup_cb', None)
+# =========================================================
+
 import requests
 from telegram import Update
 from telegram.ext import ApplicationBuilder, ContextTypes, MessageHandler, filters
