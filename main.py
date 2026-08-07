@@ -1,12 +1,4 @@
-ort sys
-import types
-
-# =========================================================
-# CRITICAL FIX FOR PYTHON 3.14 COMPATIBILITY WITH TELEGRAM
-# =========================================================
-from telegram.ext import Updater
-if not hasattr(Updater, '_Updater__polling_cleanup_cb'):
-    # Inject the missing internal attribute to bypass Python 3.14 type slot restriction
+missing internal attribute to bypass Python 3.14 type slot restriction
     setattr(Updater, '_Updater__polling_cleanup_cb', None)
 # =========================================================
 
