@@ -19,7 +19,7 @@ API_ID = int(os.environ.get("API_ID", "34305725"))
 API_HASH = os.environ.get("API_HASH", "a7439c105c050b5011a90bda4f0e1e90")
 BOT_TOKEN = os.environ.get("BOT_TOKEN", "8899747292:AAGusFkBrquTmi2gA2DDEm_4f9Woh3Q5XQQ")
 
-WEBSITE_URL = os.environ.get("WEBSITE_URL", "https://hrry.online")
+WEBSITE_URL = os.environ.get("WEBSITE_URL", "https://hrry-stream.vercel.app/")
 PORT = int(os.environ.get("PORT", "8080"))
 
 raw_stream_url = os.environ.get("STREAM_SERVER_URL", "http://localhost:8080")
@@ -153,7 +153,7 @@ async def start_msg(client, message):
     text = (
         f"✨ **Welcome to Hrry.online Cloud Player Bot!**\n\n"
         f"📁 Mujhe koi bhi **Video** ya **Document File** direct chat me bhejein.\n"
-        f"⚡ Main aapko **https://hrry.online** par direct play karne aur high-speed download ka link bana kar dunga."
+        f"⚡ Main aapko **https://hrry-stream.vercel.app/** par direct play karne aur high-speed download ka link bana kar dunga."
     )
     buttons = InlineKeyboardMarkup([
         [InlineKeyboardButton("🌐 Visit Website", url=WEBSITE_URL)]
